@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/infoNews"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Challenge Chat"
+        android:textStyle="bold"
+        android:paddingHorizontal="16dp"
+        android:gravity="bottom"
+        />
+        <View
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C1C1C1"
+            />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+        <!-- EditText와 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/challengeChatingText"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingStart="12dp"
+                android:hint="채팅을 입력하세요"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                />
+
+            <Button
+                android:id="@+id/button_go"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:text="전송"/>
+
+        </LinearLayout>
+
+</LinearLayout>

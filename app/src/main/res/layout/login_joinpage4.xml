@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="당신의 평소 식생활은\n무엇인가요?"
+        android:textSize="35dp"
+        android:fontFamily="@font/mplus_1m_regular"
+        android:layout_gravity="center"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="5dp"
+        />
+    <!-- 입력창 -->
+    <LinearLayout
+        android:id="@+id/signup_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:layout_marginHorizontal="20dp"
+        >
+        <CheckBox
+            android:id="@+id/join_food_check1"
+            android:text="A. 인스턴트 식품을 자주 먹는다"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_food_check2"
+            android:text="B. 식사를 자주 거른다"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_food_check3"
+            android:text="C. 짜고 단 음식을 많이 먹는다"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_food_check4"
+            android:text="D. 카페인이 든 음료를 하루 3잔 이상 마신다"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_food_check5"
+            android:text="E. 주류를 자주마신다"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_food_check6"
+            android:text="F. 편식을 한다"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="일주일에 운동을\n얼마나 하시나요?"
+            android:textSize="35dp"
+            android:fontFamily="@font/mplus_1m_regular"
+            android:layout_gravity="center"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="5dp"
+            />
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A. 적게(0-2회)" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B. 보통(3-4회)" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C. 많이(5회 이상)" />
+        </RadioGroup>
+    </LinearLayout>
+    <!-- 회원가입 버튼 -->
+    <Button
+        android:id="@+id/joinBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="다음"
+        android:layout_marginVertical="20dp"
+        />
+</LinearLayout>

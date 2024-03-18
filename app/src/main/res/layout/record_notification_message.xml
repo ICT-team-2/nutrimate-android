@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메시지가 도착했어요!"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:layout_marginTop="45dp"
+        />
+    <TextView
+        android:id="@+id/fcm_pull_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2월 16일(금) 오후 2:20"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fcm_pull_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="12dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border"
+            >
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/fcm_pull_profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                app:riv_oval="true"
+                android:src="@drawable/ic_mypage_profile"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="12dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/fcm_pull_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="관리자"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 님이 보낸 메시지입니다"
+                        android:textSize="17sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/fcm_pull_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nutri Mate 에서 보낸 메시지입니다"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="15dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title Text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/mplus_1m_regular"
+        android:layout_gravity="center"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="5dp"
+        />
+    <!-- Title 입력 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        app:boxStrokeWidth="2dp"
+        app:hintEnabled="false"
+        app:boxBackgroundMode="none"
+        android:background="@drawable/rounded_border"
+        >
+        <EditText
+            android:id="@+id/fcm_pull_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="Nutri Mate"
+            android:focusable="false"
+            tools:ignore="Deprecated" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Body Text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/mplus_1m_regular"
+        android:layout_gravity="center"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="5dp"
+        />
+    <!-- Body 입력 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginHorizontal="20dp"
+        app:boxStrokeWidth="2dp"
+        app:hintEnabled="false"
+        app:boxBackgroundMode="none"
+        android:background="@drawable/rounded_border"
+        >
+        <EditText
+            android:id="@+id/fcm_pull_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="약 복용 시간이에요"
+            android:focusable="false"
+            tools:ignore="Deprecated" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/fcm_pull_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="확인"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/nutri"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="5dp"
+        />
+
+</LinearLayout>

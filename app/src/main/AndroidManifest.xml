@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--웹뷰:원격에 인터넷으로 연결된 페이지 로드시 권한 추가 -->
+    <!--미 추가시 ANR(Application Not Response)발생-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Notifications 권한 추가 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <!-- 저장소 퍼미션 - Q이후 권한 불필요
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    -->
+    <!--위치 서비스를 위한 권한 추가-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- http프로토콜로 요청보낼 때 android:usesCleartextTraffic="true"추가-->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_main"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Nutrimateandroid"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+        <!-- FCM -->
+        <service
+            android:name=".view.calendar.fcm.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- 구글맵 - 발급받은 API키 설정 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC9BX1i7gDhH8uvif5-EOWmfg7xWFKMcUU"
+            />
+        <!-- 인트로 화면 -->
+        <activity
+            android:name=".IntroActivity"
+            android:exported="true"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 액티비티 파일 등록 -->
+        <!-- 첫 페이지 -->
+        <activity
+            android:name="MainPageActivity"/>
+        <!-- 로그인 화면 -->
+        <activity
+            android:name=".view.login.LoginActivity"/>
+        <!-- 메인 페이지 -->
+        <activity android:name="MainActivity"/>
+        <!-- 회원가입 -->
+        <activity android:name=".view.login.join.JoinActivity1"/>
+        <activity android:name=".view.login.join.JoinActivity2"/>
+        <activity android:name=".view.login.join.JoinActivity3"/>
+        <activity android:name=".view.login.join.JoinActivity4"/>
+        <activity android:name=".view.login.join.join5.JoinActivity5"/>
+        <activity android:name=".view.login.join.JoinActivity6"/>
+
+        <!-- 홈 -->
+        <activity android:name=".view.home.record.food.MainRecordFoodActivity"/>
+        <activity android:name=".view.home.record.sport.MainRecordSportActivity"/>
+
+        <!-- 정보공유 -->
+
+        <!-- 게시판 -->
+        <activity android:name=".view.board.crud.BoardFoodSportWriteActivity"/>
+        <activity android:name=".view.board.view.BoardViewActivity"/>
+        <activity android:name=".view.board.comment.BoardCommentActivity"/>
+        <activity android:name=".view.board.challenge.chating.BoardChallengeChatingActivity"/>
+        <activity android:name=".view.board.view.sport.BoardSportViewActivity"/>
+
+        <!-- 기록 -->
+        <activity android:name=".view.calendar.fcm.NotificationPushActivity"/>
+
+        <!-- 알림 -->
+        <activity android:name=".view.calendar.fcm.MessageActivity"/>
+        <!-- 구글 맵 -->
+        <activity android:name=".test.map.GoogleMapActivity"/>
+
+        <!-- 마이페이지 -->
+        <activity android:name=".view.mypage.profileedit.MyPageProfileEditActivity"/>
+        <activity android:name=".view.mypage.follow.page.FollowPageActivity"/>
+
+    </application>
+
+</manifest>

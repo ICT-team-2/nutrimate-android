@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/Base.Theme.Nutrimateandroid"
+    >
+
+    <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="건강한 식습관으로 더 나은 삶의\n시작을 경험하세요 "
+            android:textSize="27sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="-290dp"
+            android:layout_marginStart="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="당신만의 맞춤식 프로그램으로\n건강한 식습관을 만나보세요"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="15dp"
+            />
+    -->
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/main_image"
+        android:layout_width="match_parent"
+        android:layout_height="346dp"
+        android:background="@drawable/login2" />
+
+    <LinearLayout
+        android:id="@+id/signin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:layout_marginTop="-100dp"
+
+        android:background="@drawable/round_corner"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sign In"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <!-- 아이디 입력 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="true"
+            >
+            <EditText
+                android:id="@+id/id_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:hint="아이디"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- 비밀번호 입력 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="true"
+            >
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/password_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:hint="비밀번호"
+                android:imeOptions="actionDone"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- 로그인 버튼 -->
+        <Button
+            android:id="@+id/id_loginBotton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="로그인"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            />
+        <!-- 회원가입 버튼 -->
+        <TextView
+            android:id="@+id/joinBotton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Don`t have an account? Sign up"
+            android:layout_marginHorizontal="15dp"
+            android:paddingBottom="15dp"
+            android:gravity="center"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="20dp"
+            android:background="#C1C1C1"
+            />
+        <!-- 소셜 로그인 텍스트 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소셜 로그인"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <!-- 소셜 로그인 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="top|center"
+        >
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_login_google"
+            android:background="@android:color/transparent"
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_login_facebook"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/transparent"
+            />
+        <ImageButton
+            android:id="@+id/testBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_login_naver"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/transparent"
+            />
+        <ImageButton
+            android:id="@+id/kakao_login"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_login_kakao"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/transparent"
+            />
+    </LinearLayout>
+</LinearLayout>

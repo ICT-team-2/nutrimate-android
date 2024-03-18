@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="댓글"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"
+        />
+    <!-- 댓글이 없습니다 화면 -->
+    <LinearLayout
+        android:id="@+id/board_comment_no_comment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아직 댓글이 없습니다"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="대화를 시작하세요"
+            android:textSize="15sp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <!-- 댓글 목록 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="7dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- 댓글 작성 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            >
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/board_comment_profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                app:riv_oval="true"
+                android:src="@drawable/ic_instagram_header_profile"
+                android:layout_gravity="center"
+                />
+            <!--
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_instagram_header_profile"
+                />
+            -->
+            <EditText
+                android:id="@+id/board_comment_write"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="댓글 추가..."
+                android:layout_marginStart="7dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

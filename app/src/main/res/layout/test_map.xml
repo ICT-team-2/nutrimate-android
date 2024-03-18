@@ -1,0 +1,30 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frameLayout"
+    >
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/googleMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        map:cameraTargetLat="37.5012336"
+        map:cameraTargetLng="127.0249726"
+        map:cameraZoom="16"
+        map:mapType="normal"
+        />
+    <Button
+        android:id="@+id/btnSaveMap"
+        android:text="지도저장"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#33000000"
+        style="?attr/borderlessButtonStyle"
+        android:textColor="@color/white"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        />
+</FrameLayout>

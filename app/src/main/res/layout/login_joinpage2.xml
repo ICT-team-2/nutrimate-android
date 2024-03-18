@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="건강관리를 시작하게 된\n계기는 무엇인가요?"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/mplus_1m_regular"
+        android:layout_gravity="center"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="5dp"
+        />
+    <!-- 입력창 -->
+    <LinearLayout
+        android:id="@+id/signup_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:layout_marginHorizontal="20dp"
+        >
+        <CheckBox
+            android:id="@+id/join_reason_check1"
+            android:text="A. 질병으로 인한 관리 목적"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_reason_check2"
+            android:text="B. 다이어트(미용 목적)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_reason_check3"
+            android:text="C.벌크업(근육량 증가)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_reason_check4"
+            android:text="D.면역력을 높이기 위해"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_reason_check5"
+            android:text="E.불규칙한 식사 패턴을 바꾸기 위해"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/join_reason_check6"
+            android:text="F.또 다른 이유가 있어요!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="false"
+            >
+            <EditText
+                android:id="@+id/join_reason_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="계기를 자유롭게 적어주세요!"
+                android:enabled="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <!-- 회원가입 버튼 -->
+    <Button
+        android:id="@+id/joinBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="다음"
+        android:layout_marginVertical="20dp"
+        />
+</LinearLayout>

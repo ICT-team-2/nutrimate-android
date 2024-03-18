@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="유저들에게 메시지를\n보낼 수 있어요!"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:layout_marginTop="45dp"
+        />
+    <TextView
+        android:id="@+id/fcm_push_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2월 16일(금) 오후 2:20"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginHorizontal="20dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_border"
+            android:paddingVertical="7dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="유저들에게 이렇게 보여요!"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="-5dp"
+                android:layout_gravity="center"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/notification"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title Text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/mplus_1m_regular"
+            android:layout_gravity="center"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="5dp"
+            />
+        <!-- Title 입력 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="20dp"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="false"
+            app:boxBackgroundMode="none"
+            android:background="@drawable/rounded_border"
+            >
+            <EditText
+                android:id="@+id/fcm_push_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:hint="ex) 안녕하세요 NutriMate입니다"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Body Text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/mplus_1m_regular"
+            android:layout_gravity="center"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="5dp"
+            />
+            <!-- Body 입력 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="20dp"
+                app:boxStrokeWidth="2dp"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+                android:background="@drawable/rounded_border"
+                >
+                <EditText
+                    android:id="@+id/fcm_push_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:hint="ex) 같이 건강관리 힘내보자구요!"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/fcm_push_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="메시지 전송"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/nutri"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="5dp"
+        />
+</LinearLayout>

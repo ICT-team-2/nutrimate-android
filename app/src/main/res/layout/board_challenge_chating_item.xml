@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp">
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_talk_mine"
+        android:padding="10dp"
+        android:layout_marginStart="15dp"
+        android:text="안녕하세요."
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="7dp"
+        android:text="오전 10:23"
+        android:textSize="12dp"
+        />
+    <!--
+    <TextView
+        android:id="@+id/txt_isShown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="1"
+        android:textColor="#FFBE3C"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_date"
+        app:layout_constraintEnd_toStartOf="@+id/txt_date"
+        app:layout_constraintTop_toTopOf="@+id/txt_date" />
+    -->
+</LinearLayout>

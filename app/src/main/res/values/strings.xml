@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">nutrimate-android</string>
+    <string-array name="mypageProfile">
+        <item>로그아웃</item>
+        <item>프로필 변경</item>
+        <item>회원 탈퇴</item>
+        <item>취소</item>
+    </string-array>
+    <string-array name="profileChange">
+        <item>AI로 생성</item>
+        <item>사진 업로드</item>
+        <item>취소</item>
+    </string-array>
+
+    <string name="home_menu">홈</string>
+    <string name="info_menu">정보공유</string>
+    <string name="board_menu">게시판</string>
+    <string name="calendar_menu">캘린더</string>
+    <string name="mypage_menu">마이페이지</string>
+    <string-array name="menu_titles">
+        <item>@string/home_menu</item>
+        <item>@string/info_menu</item>
+        <item>@string/board_menu</item>
+        <item>@string/calendar_menu</item>
+        <item>@string/mypage_menu</item>
+    </string-array>
+</resources>

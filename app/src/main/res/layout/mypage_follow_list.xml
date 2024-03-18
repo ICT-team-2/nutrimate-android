@@ -1,0 +1,28 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
+    <TextView
+        android:id="@+id/followList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="팔로우 목록"
+        android:textSize="20sp"
+        android:layout_marginBottom="12dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        />
+    <Button
+        android:id="@+id/followerButtonConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:text="닫기"
+        />
+</LinearLayout>

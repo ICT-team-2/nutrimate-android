@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1057590017598",
+    "project_id": "android-fcm-801de",
+    "storage_bucket": "android-fcm-801de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057590017598:android:70e0f9a9dc073296429b6f",
+        "android_client_info": {
+          "package_name": "com.ict.fcmmessaging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJfVvhONF4pTrU3fAVYly2MMqhr_Lu5_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057590017598:android:b3e68311943ec724429b6f",
+        "android_client_info": {
+          "package_name": "com.ict.nutrimate_android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJfVvhONF4pTrU3fAVYly2MMqhr_Lu5_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
